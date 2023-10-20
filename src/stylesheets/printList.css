@@ -1,0 +1,15 @@
+.printList{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: auto;
+}
+
+.printList > :nth-child(3n + 2){
+    background-color: var(--first-sub-second-color);
+}
+
+.printList > :nth-child(3n + 3){
+    background-color: var(--first-sub-third-color);
+}

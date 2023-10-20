@@ -1,0 +1,33 @@
+.newList{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    height: auto;
+    margin-top: 1rem;
+    padding: .2rem;
+    border-radius: 4px;
+    background-color: var(--first-color);
+}
+
+#completed{
+    background-color: #38598b;
+    text-decoration: line-through;
+}
+
+.newList__text{
+    width: 80%;
+    height: auto;
+    overflow-wrap:anywhere;
+}
+
+.newList__img{
+    width: 20%;
+}
+
+@media (max-width:950px){
+    .newList{
+        width: 90%;
+    }
+}
+

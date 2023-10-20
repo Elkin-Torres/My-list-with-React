@@ -1,0 +1,32 @@
+.form{
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+    width: 80%;
+}
+
+.form__input{
+    width: 70%;
+    padding: .2rem;
+    border-radius: 4px 0 0 4px;
+    outline: none;
+}
+
+.form__btn{
+    width: 30%;
+    padding: .2rem;
+    border-radius: 0 4px 4px 0;
+}
+
+.form__note{
+    font-size: .7rem;
+    margin-top: .5rem;
+    text-decoration:underline;
+}
+
+@media (max-width:950px) {
+    .form{
+        width: 90%;
+    }
+
+}
