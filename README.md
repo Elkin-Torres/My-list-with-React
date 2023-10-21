@@ -8,4 +8,8 @@ In this responsive project you will find a tool that will allow you to record us
 
 ### Built with
 
-- React
+- React (Javascript, CSS, HTML)
+
+### Page link
+
+<https://elkin-torres.github.io/My-list-with-React/>
