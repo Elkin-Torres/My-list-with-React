@@ -61,9 +61,27 @@ function PrintList(){
         const newArr = list.filter(task => task.id !== id);
         setList(newArr);
     }
+    //allows generating the text change in the task
+    const editing = id =>{
+        const newArr = list.map(task =>{
+            if(task.id === id){
+                task.edit = !task.edit;
+            }
+            return task;
+        })
+        setList(newArr);
+    }
 
-    const editing = ed =>{
-        console.log(ed);
+    //Change the text that had been typed and disable the option to edit the text again
+    const sendNewText =(id, newText)=>{
+        const newArr = list.map(task =>{
+            if(task.id === id){
+                task.text = newText;
+                task.edit = !task.edit;
+            }
+            return task;
+        })
+        setList(newArr);
     }
 
     return(
@@ -79,6 +97,8 @@ function PrintList(){
                 compTask={compTask}
                 delTask={delTask} 
                 editTask={editing}
+                edit={item.edit}
+                sendingNewText={sendNewText}
                 />            
             )}
         </div>
