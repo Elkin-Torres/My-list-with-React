@@ -6,6 +6,9 @@ In this responsive project you will find a tool that will allow you to record us
 
 ![gif](./media/gif.gif)
 
+### Install
+Write **npm i** to your console so you can run the project without problems
+
 ### Built with
 
 - React (Javascript, CSS, HTML)

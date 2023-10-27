@@ -18,7 +18,8 @@ function InputList(props){
         const objList = {
             id:uuidv4(),
             text: task,
-            completed: false
+            completed: false,
+            edit: false
         }
 
         props.onSubmit(objList);
