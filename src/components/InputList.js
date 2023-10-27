@@ -5,7 +5,7 @@ import { v4 as uuidv4 } from 'uuid';
 
 function InputList(props){
 
-    const [task, setTask] = useState();
+    const [task, setTask] = useState("");
 
     //save the information that is writing
     const writtingTask = e =>{
@@ -22,19 +22,21 @@ function InputList(props){
         }
 
         props.onSubmit(objList);
+        setTask("");
     }
 
 return (
     <>
 <form className="form" onSubmit={sendingTask}>
-<input className="form__input"
-type="text"
-placeholder="Write a task..." 
-onChange={writtingTask}
-/>
-<button className="form__btn">
-    Add Task
-</button>
+    <input onChange={writtingTask}
+        value={task}
+        className="form__input"
+        type="text"
+        placeholder="Write a task..." 
+    />
+    <button className="form__btn">
+        Add Task
+    </button>
 </form>
 <p className='form__note'>Note: click on the item to cross it out</p>
     </>

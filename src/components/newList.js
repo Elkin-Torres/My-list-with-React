@@ -1,8 +1,8 @@
 import React from "react";
-import { BiXCircle } from "react-icons/bi";
+import { BiXCircle, BiEditAlt } from "react-icons/bi";
 import "../stylesheets/newList.css";
 
-function NewList({text, id, completed, delTask, compTask}){
+function NewList({text, id, completed, delTask, compTask, editTask}){
     return(
         <div className = "newList"
         id={ completed? "completed" : ""}>
@@ -12,10 +12,14 @@ function NewList({text, id, completed, delTask, compTask}){
             >
             {text}    
             </p> 
+            <div className="newList_btns">
             <BiXCircle 
-            className="newList__img"
             onClick={ () => delTask(id)}
             />
+            <BiEditAlt 
+            onClick={ () => editTask(text)}
+            />
+            </div>
         </div>
     );
 }

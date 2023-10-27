@@ -62,6 +62,10 @@ function PrintList(){
         setList(newArr);
     }
 
+    const editing = ed =>{
+        console.log(ed);
+    }
+
     return(
         <>
         <InputList onSubmit = {arrList} />
@@ -74,6 +78,7 @@ function PrintList(){
                 completed={item.completed}
                 compTask={compTask}
                 delTask={delTask} 
+                editTask={editing}
                 />            
             )}
         </div>
